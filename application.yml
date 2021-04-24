@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: jdbc:${CLEARDB_DATABASE_URL:mysql://localhost:3306/test?useUnicode=true&characterEncoding=utf-8&reconnect=true&useSSL=false&serverTimezone=UTC}
+    username: root
+    password: TestTest
+
+  jpa:
+    show-sql: false
+    generate-ddl: true
+    open-in-view: true
+    hibernate:
+      ddl-auto: validate
+
+  flyway:
+    baselineOnMigrate: true
+
+server:
+  port: ${PORT:8080}
+
